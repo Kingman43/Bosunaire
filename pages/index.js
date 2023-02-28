@@ -9,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <div className="flex-col flex justify-between items-center py-1" >
-            <h4>Welcome to Bosunaire</h4>
+            <h4>Welcome to Bosunaire today</h4>
             <h6>Yoyo with Bo</h6>
         </div>
     </>
