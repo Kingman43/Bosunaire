@@ -11,7 +11,7 @@ export default function Dashboard() {
     if (user)
     return(
         <div className="flex-col flex  py-1" >
-            <h5>Welcome to your Account Page {user.displayName}</h5>
+            <h5>Welcome to your Account Page4 {user.displayName}</h5>
         </div>
     )
 }
