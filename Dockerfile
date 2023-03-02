@@ -10,7 +10,7 @@ COPY . .
 
 FROM nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=react-build /bosunaire/build /usr/share/nginx/html
+COPY --from=react-build /bosunaire /usr/share/nginx/html
 
 
 ENV PORT 8080
