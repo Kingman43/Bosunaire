@@ -15,30 +15,24 @@ export default function Nav() {
                 />
             </Link>
 
-            <Link href="/page2">
-                <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
-                     referrerPolicy="no-referrer"
-                     className="w-10"
-                     title="page2"
-                />
+            <Link href="/faq">
+                FAQ
             </Link>
 
-            <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
-                 referrerPolicy="no-referrer"
-                 className="w-10"
-            />
-            <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
-                 referrerPolicy="no-referrer"
-                 className="w-10"
-            />
-            <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
-                 referrerPolicy="no-referrer"
-                 className="w-10"
-            />
+            <Link href="/host">
+                Host
+            </Link>
+
+            <Link href="/travel">
+                Travel
+            </Link>
+
+
+
 
             <ul>
                 {!user && (
-                <Link className="py-2 px-4 text-lg bg-my-green text-white rounded-lg font-medium ml-8" title="Sign In" href="/auth/login">
+                <Link className="py-1 px-1 text-lg bg-my-green text-white rounded-lg font-medium ml-2" title="Sign In" href="/auth/login">
                         Sign In
                 </Link>
                 )}

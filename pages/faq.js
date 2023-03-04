@@ -2,7 +2,7 @@ import {auth} from "../utils/firebase";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {useRouter} from "next/router";
 
-export default function Dashboard() {
+export default function Faq() {
     const [user, loading] = useAuthState(auth);
     const route = useRouter();
     console.log(user);
@@ -10,9 +10,9 @@ export default function Dashboard() {
     if (!user) route.push("/auth/login");
     if (user)
     return(
-        <div className="flex-col flex py-1" >
-            <h5>Account Page</h5>
-            <h5>{user.displayName}</h5>
+        <div className="flex-col flex  py-1" >
+            <h1>Frequently asked questions</h1>
+
         </div>
     )
 }
