@@ -1,7 +1,7 @@
 import {FcGoogle} from 'react-icons/fc';
 import {AiFillFacebook} from "react-icons/ai";
-import {GoogleAuthProvider, signInWithPopup, FacebookAuthProvider, updateProfile} from 'firebase/auth';
-import {auth} from '../../utils/firebase';
+import {GoogleAuthProvider, signInWithPopup, FacebookAuthProvider} from 'firebase/auth';
+import {auth} from '@/utils/firebase';
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 import {useAuthState} from "react-firebase-hooks/auth";

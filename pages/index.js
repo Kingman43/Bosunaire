@@ -24,16 +24,16 @@ export default function Home() {
                 <h1 className="text-2xl py-4">Welcome to Bosunaire</h1>
 
                 <h2 className="pb-4">
-                    The future for connecting travelers to hosts.
-                    Whether you're seeking a BnB or hoping to find a local to join you for an event,
+                    The future for connecting travelers and hosts.
+                    Whether you're seeking a BnB or hoping to find someone to join you for an event,
                     Bosunaire is here to connect you.
-                    Once connected, the two parties determine their own requirements and agreements
+                    Once connected, the two parties determine their own requirements, expenses and agreements
                     without being tracked or put into a box.
                 </h2>
                 <h2 className="">
                     Bosunaire encourages relationships, not transactions.
                     Parties will be connected via EMail. Then you're on your own to iron out the details.
-                    Maybe you work out a cash deal, or maybe you agree to a quid pro quo arrangement.
+                    Maybe you work out a cash deal. Maybe you agree to a quid pro quo arrangement.
                 </h2>
                 <h2 className="">
                     ---
@@ -43,12 +43,12 @@ export default function Home() {
                         Examples
                     </Link>
 
-                    <Link href="/privacy">
-                        Privacy
-                    </Link>
-
                     <Link href="/yoyo">
                         Yoyo
+                    </Link>
+
+                    <Link href="/privacy">
+                        Privacy
                     </Link>
                 </nav>
                 <h2 className="">
@@ -56,16 +56,11 @@ export default function Home() {
                 </h2>
                 <h2 className="">
                     Bosunaire sets no rules, no costs, no fees. You're on your own (Yoyo) with Bo.
-                    It's all about you and your match coming to an agreement.
-                </h2>
-                <h2 className="pt-3">
-                    We match travelers looking for specific things (places, events, assistance)
-                    with hosts (Bosunaires) wanting to assist with those same things
                 </h2>
             </div>
 
             <div>
-                <Link href="/travel" title="Find a Bosunaire">
+                <Link href="/connect" title="Find a Bosunaire">
                     <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
                 </Link>
             </div>

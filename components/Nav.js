@@ -1,10 +1,9 @@
 import Link from "next/link"
 import {useAuthState} from 'react-firebase-hooks/auth';
-import {auth} from '../utils/firebase';
+import {auth} from '@/utils/firebase';
 
 export default function Nav() {
     const [user, loading] = useAuthState(auth);
-
     return(
         <nav className="flex justify-between items-center py-1">
             <Link href="/">
@@ -23,8 +22,8 @@ export default function Nav() {
                 Host
             </Link>
 
-            <Link href="/travel" title="Find a Bosunaire match for you">
-                Travel
+            <Link href="/connect" title="Find a Bosunaire match for you">
+                Connect
             </Link>
 
             <ul>

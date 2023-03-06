@@ -4,7 +4,7 @@ export default function Examples() {
 
     return(
         <div className="flex-col flex  py-1" >
-            <h1 className="py-3 text-xl">Examples</h1>
+            <h1 className="py-2 text-xl">Examples</h1>
 
             <h2 className="py-2">
                 <b>Bed and Breakfast: </b>
@@ -23,14 +23,13 @@ export default function Examples() {
 
             <h2 className="py-2">
                 <b>Bosunaire swapping: </b>
-                Connect with someone to will host you in their city, and you return the favor.
+                Connect with someone that will host you in their city, and you return the favor.
             </h2>
 
             <div>
-                <Link href="/travel" title="Find a Bosunaire">
+                <Link href="/connect" title="Find a Bosunaire">
                     <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
                 </Link>
-
             </div>
 
         </div>
