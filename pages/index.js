@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Text from 'react'
 import Link from "next/link";
-import {auth} from "@/utils/firebase";
 
 export default function Home() {
   return (
@@ -23,39 +21,52 @@ export default function Home() {
       </Head>
         <main>
             <div className="@apply py-2" >
-                <h1 className="text-4xl  py-5">Welcome to Bosunaire</h1>
+                <h1 className="text-2xl py-4">Welcome to Bosunaire</h1>
 
-                <h2 className="p-2">Giving travelers and hosts the privacy and tools to determine their own requirements and rules
+                <h2 className="pb-4">
+                    The future for connecting travelers to hosts.
+                    Whether you're seeking a BnB or hoping to find a local to join you for an event,
+                    Bosunaire is here to connect you.
+                    Once connected, the two parties determine their own requirements and agreements
                     without being tracked or put into a box.
                 </h2>
-
-                <h2 className="p-2">Bosunaire encourages relationships between the miles.
-                    Whether the parties work out a cash deal or agree to a quid pro quo arrangement.
+                <h2 className="">
+                    Bosunaire encourages relationships, not transactions.
+                    Parties will be connected via EMail. Then you're on your own to iron out the details.
+                    Maybe you work out a cash deal, or maybe you agree to a quid pro quo arrangement.
                 </h2>
+                <h2 className="">
+                    ---
+                </h2>
+                <nav className="flex px-10 justify-between items-center text-blue-500">
+                    <Link href="/examples">
+                        Examples
+                    </Link>
 
-                <h2 className="p-2">Bosunaire sets no rules, no costs, no fees. You are on your own (Yoyo) with Bo.
-                    It's all about you and your match making an agreement</h2>
+                    <Link href="/privacy">
+                        Privacy
+                    </Link>
 
-                <h2 className="p-2">We match travelers looking for specific things (places, events, assistance)
-                    with hosts (Bosunaires) wanting to assist with those very things</h2>
+                    <Link href="/yoyo">
+                        Yoyo
+                    </Link>
+                </nav>
+                <h2 className="">
+                    ---
+                </h2>
+                <h2 className="">
+                    Bosunaire sets no rules, no costs, no fees. You're on your own (Yoyo) with Bo.
+                    It's all about you and your match coming to an agreement.
+                </h2>
+                <h2 className="pt-3">
+                    We match travelers looking for specific things (places, events, assistance)
+                    with hosts (Bosunaires) wanting to assist with those same things
+                </h2>
             </div>
-            <nav className="flex px-10 justify-between items-center text-blue-500">
-                <Link href="/examples">
-                    Examples
-                </Link>
 
-                <Link href="/privacy">
-                    Privacy
-                </Link>
-
-                <Link href="/yoyo">
-                    Yoyo
-                </Link>
-
-            </nav>
             <div>
-                <Link href="/auth/login" title="Sign in to Bosunaire">
-                    <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-8"> Yoyo with Bo</h1>
+                <Link href="/travel" title="Find a Bosunaire">
+                    <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
                 </Link>
             </div>
 
