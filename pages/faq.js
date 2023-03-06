@@ -14,13 +14,6 @@ export default function Faq() {
                 </Link>
             </div>
 
-            <Link className="flex justify-center  " href="/">
-                <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
-                     referrerPolicy="no-referrer"
-                     className="w-100"
-                     title="Home"
-                />
-            </Link>
         </div>
     )
 }
