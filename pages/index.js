@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Text from 'react'
+import Link from "next/link";
+import {auth} from "@/utils/firebase";
 
 export default function Home() {
   return (
@@ -19,13 +21,47 @@ export default function Home() {
           <meta name="theme-color" content="#ffffff"/>
 
       </Head>
-        <div className="flex-col flex justify-between items-center py-1" >
-            <h4>Welcome to Bosunaire today</h4>
+        <main>
+            <div className="@apply py-2" >
+                <h1 className="text-4xl  py-5">Welcome to Bosunaire</h1>
 
-            <h6>Yoyo with Bo</h6>
+                <h2 className="p-2">Giving travelers and hosts the privacy and tools to determine their own requirements and rules
+                    without being tracked or put into a box.
+                </h2>
 
+                <h2 className="p-2">Bosunaire encourages relationships between the miles.
+                    Whether the parties work out a cash deal or agree to a quid pro quo arrangement.
+                </h2>
 
-        </div>
+                <h2 className="p-2">Bosunaire sets no rules, no costs, no fees. You are on your own (Yoyo) with Bo.
+                    It's all about you and your match making an agreement</h2>
+
+                <h2 className="p-2">We match travelers looking for specific things (places, events, assistance)
+                    with hosts (Bosunaires) wanting to assist with those very things</h2>
+            </div>
+            <nav className="flex px-10 justify-between items-center text-blue-500">
+                <Link href="/examples">
+                    Examples
+                </Link>
+
+                <Link href="/privacy">
+                    Privacy
+                </Link>
+
+                <Link href="/yoyo">
+                    Yoyo
+                </Link>
+
+            </nav>
+            <div>
+                <Link href="/auth/login" title="Sign in to Bosunaire">
+                    <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-8"> Yoyo with Bo</h1>
+                </Link>
+            </div>
+
+        </main>
     </>
   )
 }
+
+//<div className="flex-col flex justify-between items-center py-1" >

@@ -6,7 +6,7 @@ export default function Nav() {
     const [user, loading] = useAuthState(auth);
 
     return(
-        <nav className={"flex justify-between items-center py-1"}>
+        <nav className="flex justify-between items-center py-1">
             <Link href="/">
                 <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
                      referrerPolicy="no-referrer"
@@ -15,31 +15,29 @@ export default function Nav() {
                 />
             </Link>
 
-            <Link href="/faq">
+            <Link href="/faq" title="Frequently asked questions">
                 FAQ
             </Link>
 
-            <Link href="/host">
+            <Link href="/host" title="Become a Bosunaire Host">
                 Host
             </Link>
 
-            <Link href="/travel">
+            <Link href="/travel" title="Find a Bosunaire match for you">
                 Travel
             </Link>
 
-
-
-
             <ul>
                 {!user && (
-                <Link className="py-1 px-1 text-lg bg-my-green text-white rounded-lg font-medium ml-2" title="Sign In" href="/auth/login">
+                <Link className=" bg-gradient-to-r from-my-purple to-my-green py-1 px-1 text-lg bg-my-green text-white rounded-lg font-medium ml-2" title="Sign In" href="/auth/login">
                         Sign In
                 </Link>
                 )}
                 {user && (
                     <div className="flex-col flex justify-between items-center py-1">
 
-                        <Link href="/dashboard">
+                        <Link href="/dashboard"
+                            title="Go to your account page">
                             <img src={user.photoURL}
                                  alt="avatar"
                                  referrerPolicy="no-referrer"

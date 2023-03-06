@@ -41,7 +41,6 @@ export default function Login() {
     }, [user]);
     return(
         <div className="shadow-xl mt-5 p-5">
-            <h2 className="text-3xl">Join today</h2>
             <div className="py-4">
                 <h3 className="py-4">Sign in with one of the providers</h3>
             </div>
