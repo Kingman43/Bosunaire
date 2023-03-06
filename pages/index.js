@@ -38,16 +38,16 @@ export default function Home() {
                 <h2 className="">
                     ---
                 </h2>
-                <nav className="flex px-10 justify-between items-center text-blue-500">
-                    <Link href="/examples">
+                <nav className="flex justify-center text-blue-500">
+                    <Link className="px-4" href="/examples">
                         Examples
                     </Link>
 
-                    <Link href="/yoyo">
+                    <Link className="px-4" href="/yoyo">
                         Yoyo
                     </Link>
 
-                    <Link href="/privacy">
+                    <Link  className="px-4"  href="/privacy">
                         Privacy
                     </Link>
                 </nav>

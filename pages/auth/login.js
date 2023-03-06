@@ -4,7 +4,7 @@ import {GoogleAuthProvider, signInWithPopup, FacebookAuthProvider} from 'firebas
 import {auth} from '@/utils/firebase';
 import {useRouter} from "next/router";
 import {useEffect} from "react";
-import {useAuthState} from "react-firebase-hooks/auth";
+import {useAuthState, useUpdateProfile} from "react-firebase-hooks/auth";
 
 export default function Login() {
     const [user, loading] = useAuthState(auth);
@@ -24,7 +24,19 @@ export default function Login() {
     const fbProvider = new FacebookAuthProvider();
     const FacebookLogin = async () => {
         try {
+//            const result = await signInWithPopup(auth, fbProvider);
+//            const credential = await FacebookAuthProvider.credentialFromResult(result);
+//            const token = credential.accessToken;
+//            let photoUrl = result.user.photoURL + "?height=500&access_token=" + token;
+//            await useUpdateProfile({auth: auth.currentUser}, {photoUrl: photoUrl});
+
             const result = await signInWithPopup(auth, fbProvider);
+            const credential = await FacebookAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            let photoUrl = result.user.photoURL + "?height=500&access_token=" + token;
+            await useUpdateProfile({auth: auth.currentUser}, {photoUrl: photoUrl});
+
+
             console.log(result);
             route.push("/dashboard");
         } catch (error) {
@@ -41,15 +53,24 @@ export default function Login() {
     }, [user]);
     return(
         <div className="shadow-xl mt-5 p-5">
+
             <div className="py-4">
                 <h3 className="py-4">Sign in with one of the providers</h3>
             </div>
             <div className="flex flex-col items-center gap-4">
-                <button onClick={GoogleLogin} className="text-white bg-gray-700 p-4 w-full font-medium rounded-lg flex align-middle gap-2">
+                <button onClick={GoogleLogin} className="text-white bg-gray-700 p-4 w-30 font-medium rounded-lg flex align-middle gap-2">
                     <FcGoogle className="text-2xl"/>Sign in with Google
                 </button>
-                <button onClick={FacebookLogin} className="text-white bg-gray-700 p-4 w-full font-medium rounded-lg flex align-middle gap-2">
+                <div className="text-xl">Or</div>
+                <button onClick={FacebookLogin} className="text-white bg-gray-700 p-4 w-100 font-medium rounded-lg flex align-middle gap-2 ">
                     <AiFillFacebook className="text-2xl text-blue-400"/> Sign in with Facebook
+                </button>
+            </div>
+            <div className="text-xl pt-4 ">Or</div>
+            <div className="flex justify-center py-4">
+                <button onClick={GoogleLogin} className="text-white bg-gradient-to-r from-my-purple to-my-green p-4 w-30 font-medium rounded-lg flex align-middle gap-2">
+                    Sign in with EMail
+                    Not yet implemented. Use Google or Facebook for now
                 </button>
             </div>
         </div>

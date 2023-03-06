@@ -13,6 +13,14 @@ export default function Faq() {
                     <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
                 </Link>
             </div>
+
+            <Link className="flex justify-center  " href="/">
+                <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
+                     referrerPolicy="no-referrer"
+                     className="w-100"
+                     title="Home"
+                />
+            </Link>
         </div>
     )
 }
