@@ -32,7 +32,7 @@ export default function Home() {
                 </h2>
                 <h2 className="">
                     Bosunaire encourages relationships, not transactions.
-                    Parties will be connected via EMail. Then you're on your own to iron out the details.
+                    Parties will be connected via email. Then you're on your own to iron out the details.
                     Maybe you work out a cash deal. Maybe you agree to a quid pro quo arrangement.
                 </h2>
                 <h2 className="">

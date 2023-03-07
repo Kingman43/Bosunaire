@@ -10,7 +10,7 @@ export default function Examples() {
                 <b>Bed and Breakfast: </b>
                 Need a place to stay tonight (or next month) while you're traveling? Click the Bosunaire map to match
                 with available hosts that meet your specific parameters. Bosunaire.com notifies
-                applicable hosts. Hosts Email you directly. Then you're on your own regarding
+                applicable hosts. Hosts email you directly. Then you're on your own regarding
                 costs, method of payment, etc.
             </h2>
 
@@ -22,7 +22,7 @@ export default function Examples() {
                 The host prefers to match with someone that will
                 return the favor next year when the opposing team hosts. You click on the map to find a BnB for the
                 game. You notice "The full experience" is available. You select it. Bosunaire.com notifies applicable
-                hosts. Hosts Email you directly to confirm details.
+                hosts. Hosts email you directly to confirm details.
             </h2>
 
             <h2 className="py-2">
