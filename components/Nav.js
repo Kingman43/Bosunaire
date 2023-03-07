@@ -3,7 +3,7 @@ import {useAuthState} from 'react-firebase-hooks/auth';
 import {auth} from '@/utils/firebase';
 
 export default function Nav() {
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     return(
         <nav className="flex justify-between items-center py-1">
             <Link href="/">
@@ -14,7 +14,7 @@ export default function Nav() {
                 />
             </Link>
 
-            <Link href="/faq" title="Frequently asked questions">
+            <Link href="/faqpage" title="Frequently asked questions">
                 FAQ
             </Link>
 
