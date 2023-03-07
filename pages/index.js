@@ -27,8 +27,8 @@ export default function Home() {
                     The future for connecting travelers and hosts.
                     Whether you're seeking a BnB or hoping to find someone to join you for an event,
                     Bosunaire is here to connect you.
-                    Once connected, the two parties determine their own requirements, expenses and agreements
-                    without being tracked or put into a box.
+                    Once connected, you and your connected Bo will determine agenda, expenses and other details.
+                    Bosunaire will not track you or confine your limits.
                 </h2>
                 <h2 className="">
                     Bosunaire encourages relationships, not transactions.
