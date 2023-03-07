@@ -6,7 +6,7 @@ export default function Faq() {
         <div className="flex-col flex  py-1" >
             <h1 className="pt-8">Frequently asked questions</h1>
 
-            <h2 className="p-8">Blah, blah, blah</h2>
+            <h2 className="p-8">Probably import a package for FAQ</h2>
 
             <div>
                 <Link href="/connect" title="Find a Bosunaire">
