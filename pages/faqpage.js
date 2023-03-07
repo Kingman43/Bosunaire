@@ -49,7 +49,7 @@ export default function FaqPage() {
                     "user reviews and user ratings. ",
             },
             {
-                title: "How do I verify the other person I'm emailing with is not a scammer? ",
+                title: "How do I verify the other person I'm emailing is not a scammer? ",
                 content: "Remember, you're on you own, so that's a VERY good question. " +
                     "Make sure the other Bo sends you their profile, user reviews and user ratings. " +
                     "Their profile should contain a link to at least one social media for the user. " +
@@ -77,12 +77,12 @@ export default function FaqPage() {
             },
             {
                 title: "Why did you develop bosunaire.com?",
-                content: "I was a frequent user of the two main online BnB reservation " +
+                content: "I was a frequent user of the two other online BnB reservation " +
                     "sites. The options were often limited. Then, as their corporate fees, cleaning fees, taxes and " +
                     "other fees almost doubled the price shown for the BnB " +
                     "on their map, I felt the bait-and-switch. I grew frustrated and decided there must be a cheaper " +
-                    "and more honest alternative for finding a host for my travels. Plus there were times when " +
-                    "I wanted to know the host a bit more. ",
+                    "and more honest alternative for finding a host for my travels. " +
+                    "Plus there were times when I just want to pay cash and not be tracked. ",
             },
             {
                 title: "Who is behind Bosunaire? And what is the tech stack?",
