@@ -34,7 +34,7 @@ export default function Home() {
                     Travelers and hosts will be connected via email. Then you're on your own to iron out the details.
                     Maybe you work out a cash deal. Maybe you agree to a quid pro quo arrangement.
                 </h2>
-                <h2 className="">
+                <h2 className=" text-gray-400">
                     ---
                 </h2>
                 <nav className="flex justify-center text-blue-500">
@@ -50,19 +50,21 @@ export default function Home() {
                         Privacy
                     </Link>
                 </nav>
-                <h2 className="">
+                <h2 className=" text-gray-400 ">
                     ---
                 </h2>
                 <h2 className="">
                     Bosunaire sets no rules, no costs, no fees. You're on your own (Yoyo) with Bo.
                 </h2>
+
+                <div>
+                    <Link href="/connect" title="Find a Bosunaire">
+                        <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
+                    </Link>
+                </div>
             </div>
 
-            <div>
-                <Link href="/connect" title="Find a Bosunaire">
-                    <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
-                </Link>
-            </div>
+
 
         </main>
     </>

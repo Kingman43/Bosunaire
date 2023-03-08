@@ -5,8 +5,8 @@ import {auth} from '@/utils/firebase';
 export default function Nav() {
     const [user] = useAuthState(auth);
     return(
-        <nav className="flex justify-between items-center py-1">
-            <Link href="/">
+        <nav className="flex justify-between items-center bg-my-nav-bar rounded-lg  py-1">
+            <Link className="pl-1" href="/">
                 <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
                      referrerPolicy="no-referrer"
                      className="w-10"
@@ -26,9 +26,9 @@ export default function Nav() {
                 Host
             </Link>
 
-            <ul>
+            <ul className="pr-1">
                 {!user && (
-                <Link className=" bg-gradient-to-r from-my-purple to-my-green py-1 px-1 text-lg bg-my-green text-white rounded-lg font-medium ml-2" title="Sign In" href="/auth/login">
+                <Link className=" bg-gradient-to-r from-purple-300 to-my-green py-1 px-1 text-lg text-white rounded-lg font-medium ml-2" title="Sign In" href="/auth/login">
                         Sign In
                 </Link>
                 )}

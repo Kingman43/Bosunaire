@@ -7,7 +7,7 @@ import {useEffect} from "react";
 import {useAuthState, useUpdateProfile} from "react-firebase-hooks/auth";
 
 export default function Login() {
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const route = useRouter();
         // Sign in with Google
     const googleProvider = new GoogleAuthProvider();
@@ -68,9 +68,9 @@ export default function Login() {
             </div>
             <div className="text-xl pt-4 ">Or</div>
             <div className="flex justify-center py-4">
-                <button onClick={GoogleLogin} className="text-white bg-gradient-to-r from-my-purple to-my-green p-4 w-30 font-medium rounded-lg flex align-middle gap-2">
-                    Sign in with EMail
-                    Not yet implemented. Use Google or Facebook for now
+                <button onClick={GoogleLogin} className="text-white bg-gray-500 p-2 w-30 font-medium rounded-lg flex align-middle gap-2">
+                    Sign in with email
+                    not yet implemented. Use Google or Facebook for now
                 </button>
             </div>
         </div>
