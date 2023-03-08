@@ -8,7 +8,7 @@ export default function Home() {
         <title>Bosunaire</title>
         <meta name="description" content="Bosunaire - Yoyo with Bo" />
 
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
 
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
@@ -27,12 +27,11 @@ export default function Home() {
                     The future for connecting travelers and hosts.
                     Whether you're seeking a BnB or hoping to find someone to join you for an event,
                     Bosunaire is here to connect you.
-                    Once connected, you and your connected Bo will determine agenda, expenses and other details.
-                    Bosunaire will not track you or confine your limits.
+                    Once connected, you and your connected Bo will determine expenses and other details.
                 </h2>
                 <h2 className="">
-                    Bosunaire encourages relationships, not transactions.
-                    Parties will be connected via email. Then you're on your own to iron out the details.
+                    Bosunaire encourages relationships.
+                    Travelers and hosts will be connected via email. Then you're on your own to iron out the details.
                     Maybe you work out a cash deal. Maybe you agree to a quid pro quo arrangement.
                 </h2>
                 <h2 className="">

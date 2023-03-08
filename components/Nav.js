@@ -18,12 +18,12 @@ export default function Nav() {
                 FAQ
             </Link>
 
-            <Link href="/host" title="Become a Bosunaire Host">
-                Host
-            </Link>
-
             <Link href="/connect" title="Find a Bosunaire match for you">
                 Connect
+            </Link>
+
+            <Link href="/host" title="Become a Bosunaire Host">
+                Host
             </Link>
 
             <ul>
