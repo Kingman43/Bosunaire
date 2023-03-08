@@ -68,7 +68,7 @@ export default function Login() {
             </div>
             <div className="text-xl pt-4 ">Or</div>
             <div className="flex justify-center py-4">
-                <button onClick={GoogleLogin} className="text-white bg-gray-500 p-2 w-30 font-medium rounded-lg flex align-middle gap-2">
+                <button className="text-white bg-gray-500 p-2 w-30 font-medium rounded-lg flex align-middle gap-2">
                     Sign in with email
                     not yet implemented. Use Google or Facebook for now
                 </button>
