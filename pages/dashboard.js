@@ -1,4 +1,4 @@
-import {auth} from "../utils/firebase";
+import {auth} from "@/utils/firebase";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {useRouter} from "next/router";
 
@@ -10,9 +10,11 @@ export default function Dashboard() {
     if (!user) route.push("/auth/login");
     if (user)
     return(
-        <div className="flex-col flex py-1" >
-            <h5>Account Page</h5>
-            <h5>{user.displayName}</h5>
+        <div className="flex flex-col py-1" >
+            <h5 className="py-4">Account Page</h5>
+            <h5 className="py-6">{user.displayName}</h5>
+
+            <button className="text-lg hover:text-my-purple" onClick={() => auth.signOut()}>Sign out</button>
         </div>
     )
 }

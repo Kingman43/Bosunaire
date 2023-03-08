@@ -11,7 +11,7 @@ export default function Host() {
     if (user)
     return(
         <div className=" flex flex-col py-1" >
-            <h1>Become a Bosunaire host</h1>
+            <h1 className="py-4">Become a Bosunaire host</h1>
         </div>
     )
 }

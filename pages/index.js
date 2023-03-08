@@ -38,15 +38,15 @@ export default function Home() {
                     ---
                 </h2>
                 <nav className="flex justify-center text-blue-500">
-                    <Link className="px-4" href="/examples">
+                    <Link className="px-4 hover:text-my-hover " href="/examples">
                         Examples
                     </Link>
 
-                    <Link className="px-4" href="/yoyo">
+                    <Link className="px-4 hover:text-my-hover " href="/yoyo">
                         Yoyo
                     </Link>
 
-                    <Link  className="px-4"  href="/privacy">
+                    <Link  className="px-4 hover:text-my-hover "  href="/privacy">
                         Privacy
                     </Link>
                 </nav>
