@@ -1,4 +1,5 @@
-import Link from "next/link";
+import BoHome from "@/components/bohome.js";
+import YoyoWithBo from "@/components/yoywithbo";
 
 export default function Privacy() {
 
@@ -18,18 +19,8 @@ export default function Privacy() {
                 Bosunaires for matching purposes. We have zero other uses for your travel specifications.
             </h2>
 
-            <div>
-                <Link href="/search" title="Find a Bosunaire">
-                    <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
-                </Link>
-            </div>
-            <Link className="flex justify-center pt-4  " href="/">
-                <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
-                     referrerPolicy="no-referrer"
-                     className="w-12"
-                     title="Home"
-                />
-            </Link>
+            <YoyoWithBo/>
+            <BoHome/>
         </div>
     )
 }

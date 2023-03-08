@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import Link from "next/link";
+import BoHome from "@/components/bohome.js";
+import YoyoWithBo from "@/components/yoywithbo";
+
 
 export default function Home() {
   return (
@@ -57,11 +60,8 @@ export default function Home() {
                     Bosunaire sets no rules, no costs, no fees. You're on your own (Yoyo) with Bo.
                 </h2>
 
-                <div>
-                    <Link href="/search" title="Find a Bosunaire">
-                        <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
-                    </Link>
-                </div>
+                <YoyoWithBo/>
+                <BoHome/>
             </div>
 
 

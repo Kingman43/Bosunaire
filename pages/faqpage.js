@@ -1,4 +1,5 @@
 import Faq from "react-faq-component";
+import BoHome from "@/components/bohome.js";
 
 export default function FaqPage() {
 
@@ -138,6 +139,7 @@ export default function FaqPage() {
                     config={config}
                 />
             </div>
+            <BoHome/>
         </div>
     );
 }

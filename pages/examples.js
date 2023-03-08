@@ -1,4 +1,5 @@
-import Link from "next/link";
+import BoHome from "@/components/bohome.js";
+import YoyoWithBo from "@/components/yoywithbo";
 
 export default function Examples() {
 
@@ -25,24 +26,14 @@ export default function Examples() {
                 hosts. Hosts email you directly to confirm details.
             </h2>
 
-            <h2 className="py-2">
+            <h2 className="pt-2">
                 <b>Bosunaire swapping: </b>
                 Connect with someone that will host you in their city, and you return the favor
                 to host them in your city.
             </h2>
 
-            <div>
-                <Link href="/search" title="Find a Bosunaire">
-                    <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
-                </Link>
-            </div>
-            <Link className="flex justify-center pt-4  " href="/">
-                <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
-                     referrerPolicy="no-referrer"
-                     className="w-12"
-                     title="Home"
-                />
-            </Link>
+            <YoyoWithBo/>
+            <BoHome/>
 
         </div>
 
