@@ -127,8 +127,9 @@ export default function FaqPage() {
     };
 
     return (
-        <div className="pt-8">
-            <h1 className="flex-col py-1 text-xl" >Frequently asked questions</h1>
+        <div className=" flex flex-col py-1">
+
+            <h1 className="flex-col pt-4 text-xl" >Frequently asked questions</h1>
             <div className="text-left">
                 <Faq
                     data={data}

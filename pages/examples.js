@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Examples() {
 
     return(
-        <div className="flex-col flex  py-1" >
+        <div className="flex flex-col  py-1" >
             <h1 className="py-2 text-xl">Examples</h1>
 
             <h2 className="py-2">
