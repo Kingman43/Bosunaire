@@ -4,7 +4,7 @@ export default function Yoyo() {
 
     return(
         <div className="flex-col flex  py-1" >
-            <h1 className="py-3 text-red-500 text-3xl">You're on your own</h1>
+            <h1 className="py-3 text-3xl">You're on your own</h1>
 
             <h2 className="py-2 text-xl ">
                 This cannot be stressed enough. You are very much <b> ON YOUR OWN </b>regarding verification
@@ -40,6 +40,13 @@ export default function Yoyo() {
                     <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
                 </Link>
             </div>
+            <Link className="flex justify-center pt-4  " href="/">
+                <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
+                     referrerPolicy="no-referrer"
+                     className="w-12"
+                     title="Home"
+                />
+            </Link>
 
         </div>
 

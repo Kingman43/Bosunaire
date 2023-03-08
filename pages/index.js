@@ -20,10 +20,10 @@ export default function Home() {
 
       </Head>
         <main>
-            <div className="@apply py-2" >
-                <h1 className="text-2xl py-4">Welcome to Bosunaire</h1>
+            <div className="py-4" >
+                <h1 className="text-2xl">Welcome to Bosunaire</h1>
 
-                <h2 className="pb-4">
+                <h2 className="py-4">
                     The future for connecting travelers and hosts.
                     Whether you're seeking a BnB or hoping to find someone to join you for an event,
                     Bosunaire is here to connect you.
