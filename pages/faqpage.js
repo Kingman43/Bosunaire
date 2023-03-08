@@ -34,9 +34,10 @@ export default function FaqPage() {
             },
             {
                 title: "Is there a Bosunaire app I can download to my phone?",
-                content: "No. Only a website. Downloading an app exposes lots of data you might not realize. " +
-                    "Your privacy is paramount with us. " +
-                    "Also, as a single software developer, a simple website is much easier to " +
+                content: "No. Bosunaire is website only. " +
+                    "Downloading an app exposes your personal data. " +
+                    "With Bo your privacy is paramount. " +
+                    "Also, as a single software developer, a website is much easier to " +
                     "maintain than phone apps ",
             },
             {
