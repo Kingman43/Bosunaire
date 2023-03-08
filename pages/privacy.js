@@ -19,7 +19,7 @@ export default function Privacy() {
             </h2>
 
             <div>
-                <Link href="/connect" title="Find a Bosunaire">
+                <Link href="/search" title="Find a Bosunaire">
                     <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
                 </Link>
             </div>

@@ -18,8 +18,8 @@ export default function Nav() {
                 FAQ
             </Link>
 
-            <Link href="/connect" title="Find a Bosunaire match for you">
-                Connect
+            <Link href="/search" title="Find a Bosunaire match for you">
+                Search
             </Link>
 
             <Link href="/host" title="Become a Bosunaire Host">

@@ -8,7 +8,7 @@ export default function FaqPage() {
             {
                 title: "Can I use bosunaire.com without signing in?",
                 content: "Yes. " +
-                    "Simply click 'Connect' at the top. You can search the map and get a feel for how " +
+                    "Simply click 'Search' at the top. You can search the map and get a feel for how " +
                     "the tool works. If you actually want to connect to another user without signing in, " +
                     "Bosunaire will require an email address in the 'Notes to host' field. " +
                     "In this case, we will email only the Bo hosts that accept non-verified Bo users. " +
