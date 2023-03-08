@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Connect() {
+export default function Search() {
 
     return(
         <div className="flex flex-col py-1" >
