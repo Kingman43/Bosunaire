@@ -23,6 +23,13 @@ export default function Privacy() {
                     <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
                 </Link>
             </div>
+            <Link className="flex justify-center pt-4  " href="/">
+                <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
+                     referrerPolicy="no-referrer"
+                     className="w-12"
+                     title="Home"
+                />
+            </Link>
         </div>
     )
 }
