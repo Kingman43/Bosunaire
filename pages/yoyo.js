@@ -1,4 +1,5 @@
-import Link from "next/link";
+import YoyoWithBo from "@/components/yoywithbo";
+import Bohome from "@/components/bohome";
 
 export default function Yoyo() {
 
@@ -18,7 +19,7 @@ export default function Yoyo() {
                 the address they are specifying
             </h2>
 
-            <h2 className="py-2">
+            <h2 className="pt-2">
                 Payments are handled outside of Bosunaire.com.
                 Remember, you're on your own.
                 Bosunaire.com cannot refund you.
@@ -26,28 +27,8 @@ export default function Yoyo() {
                 Bosunaire is simply a tool to connect people. After connecting, you're on your own.
             </h2>
 
-
-            <h2 className="py-2 text-3xl">
-                Under Contruction - more to do
-            </h2>
-
-            <h2 className="py-2">
-
-            </h2>
-
-            <div>
-                <Link href="/search" title="Find a Bosunaire">
-                    <h1 className=" bg-gradient-to-r from-my-bg to-green-500 text-4xl rounded-xl mt-3"> Yoyo with Bo</h1>
-                </Link>
-            </div>
-            <Link className="flex justify-center pt-4  " href="/">
-                <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
-                     referrerPolicy="no-referrer"
-                     className="w-12"
-                     title="Home"
-                />
-            </Link>
-
+            <YoyoWithBo/>
+            <Bohome/>
         </div>
 
     )
