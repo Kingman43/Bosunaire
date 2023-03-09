@@ -1,7 +1,8 @@
 import 'leaflet/dist/leaflet.css'
 import style from '@/styles/Home.module.css';
-import { MapContainer, TileLayer } from "react-leaflet";
-
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet-defaulticon-compatibility";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 function Map( props ) {
     //const position = [35.91086, -78.69078]
 
@@ -12,7 +13,9 @@ function Map( props ) {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             >
             </TileLayer>
-
+            <Marker position={props.position}>
+                <Popup>You are here</Popup>
+            </Marker>
         </MapContainer>
     )
 }

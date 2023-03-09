@@ -2,7 +2,7 @@ import BoHome from "@/components/bohome.js";
 import Map from '@/components/map';
 export default function Search() {
     const position = [35.91086, -78.69078];
-    const zoom = 15;
+    const zoom = 10;
     const marker = [35.91086, -78.69078];
     return(
         <div className="" >
