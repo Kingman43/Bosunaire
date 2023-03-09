@@ -4,7 +4,7 @@ import Bohome from "@/components/bohome";
 export default function Yoyo() {
 
     return(
-        <div className="flex flex-col  py-1" >
+        <div className="mx-auto max-w-prose flex flex-col  py-1" >
             <h1 className="py-3 text-3xl">You're on your own</h1>
 
             <h2 className="py-2 text-xl ">

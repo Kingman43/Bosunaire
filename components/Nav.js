@@ -5,7 +5,8 @@ import {auth} from '@/utils/firebase';
 export default function Nav() {
     const [user] = useAuthState(auth);
     return(
-        <nav className="flex justify-around items-center bg-my-nav-bar rounded-lg  py-1">
+        <nav className="mx-auto max-w-prose flex justify-around items-center bg-my-nav-bar
+                        rounded-lg  py-1">
             <Link className=" hover:bg-my-nav-hover pl-1 rounded" href="/">
                 <img src="/BoPurpleGreenTrans.png" alt="BoLogo"
                      referrerPolicy="no-referrer"

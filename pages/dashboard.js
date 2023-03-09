@@ -10,7 +10,7 @@ export default function Dashboard() {
     if (!user) route.push("/auth/login");
     if (user)
     return(
-        <div className="flex flex-col py-1" >
+        <div className="mx-auto max-w-prose flex flex-col py-1" >
             <h5 className="py-4">Account Page</h5>
             <h5 className="py-6">{user.displayName}</h5>
 

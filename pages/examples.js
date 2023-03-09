@@ -4,7 +4,7 @@ import YoyoWithBo from "@/components/yoywithbo";
 export default function Examples() {
 
     return(
-        <div className="flex flex-col  py-1" >
+        <div className="mx-auto max-w-prose flex flex-col  py-1" >
             <h1 className="py-2 text-xl">Examples</h1>
 
             <h2 className="py-2">

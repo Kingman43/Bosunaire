@@ -7,9 +7,9 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 function Map( props ) {
     //const position = [35.91086, -78.69078]
     const myIcon = new Icon({
-        iconUrl: "/BoPurpleGreenTrans.png",
-        iconSize: [30, 30],
-        iconAnchor: [15, 15],
+        iconUrl: "/boMapIcon.png",
+        iconSize: [24, 17],
+        iconAnchor: [12, 9],
         popupAnchor: [0, 0],
     });
 
@@ -24,7 +24,7 @@ function Map( props ) {
                 <Marker position={location.position}  icon={myIcon}>
                     <Popup>{location.name}</Popup>
                 </Marker>
-                ))}
+            ))}
 
         </MapContainer>
     )
