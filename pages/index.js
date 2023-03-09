@@ -23,7 +23,7 @@ export default function Home() {
 
       </Head>
         <main>
-            <div className="py-4" >
+            <div className="mx-auto max-w-prose py-4" >
                 <h1 className="text-2xl">Welcome to Bosunaire</h1>
 
                 <h2 className="py-4">

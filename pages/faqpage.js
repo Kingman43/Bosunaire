@@ -129,7 +129,7 @@ export default function FaqPage() {
     };
 
     return (
-        <div className=" flex flex-col py-1">
+        <div className="mx-auto max-w-prose  flex flex-col py-1">
 
             <h1 className="flex-col pt-4 text-xl" >Frequently asked questions</h1>
             <div className="text-left">

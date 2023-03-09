@@ -4,7 +4,7 @@ import YoyoWithBo from "@/components/yoywithbo";
 export default function Privacy() {
 
     return(
-        <div className="flex flex-col  py-1" >
+        <div className="mx-auto max-w-prose flex flex-col  py-1" >
             <h1 className="py-3 text-xl">Privacy</h1>
             <h2 className="pt-2">
                 We do not read your browser cookies.

@@ -12,7 +12,7 @@ export default function Host() {
     if (!user) route.push("/auth/login");
     if (user)
     return(
-        <div className=" flex flex-col py-1" >
+        <div className="mx-auto max-w-prose flex flex-col py-1" >
             <h1 className="py-4">Become a Bosunaire host</h1>
             <BoHome/>
         </div>
