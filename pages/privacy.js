@@ -10,13 +10,17 @@ export default function Privacy() {
                 We do not read your browser cookies.
                 We do not mine your personal data.
                 We do not sell your data.
-                I am a software developer in North Carolina connecting one Bosunaire to another. I do not
-                care who you are, where you are or anything about you.
+                We will not show your location on the map.
+                The map shows only a summary/total of the hosts in the area.
             </h2>
 
             <h2 className="pt-8">
                 Note, the Host and traveler data stored in our private database are to assist other
                 Bosunaires for matching purposes. We have zero other uses for your travel specifications.
+            </h2>
+            <h2>
+                I am a software developer in North Carolina connecting one Bosunaire to another. I do not
+                care who you are, where you are or anything about you.
             </h2>
 
             <YoyoWithBo/>
