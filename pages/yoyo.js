@@ -1,4 +1,4 @@
-import YoyoWithBo from "@/components/yoywithbo";
+import YoyoWithBo from "@/components/yoyowithbo";
 import Bohome from "@/components/bohome";
 
 export default function Yoyo() {

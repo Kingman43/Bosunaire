@@ -45,10 +45,11 @@ export default function FaqPage() {
                 title: "Can you tell me more about privacy?",
                 content: "Foremost, we do NOT collect or mine your data. We do not sell your email address. " +
                     "On top of that, your profile, user reviews, user rating, etc, are not exposed to the public " +
-                    "or to members you have never attempt to connect with. Your profile/reviews/rating are shared " +
-                    "only with hosts we attempt to connect with you. " +
-                    "Hosts that respond to you via email are encouraged to attach their Bo profile containing " +
-                    "user reviews and user ratings. ",
+                    "or to members you have never attempted to connect with. Upon a submitted search, you determine whether " +
+                    "your profile/reviews/rating are shared with potential hosts. " +
+                    "Hosts that respond to you via email are encouraged to attach their profile containing " +
+                    "user reviews and user ratings. " +
+                    "Agreements are performed via EMails between travellers and hosts."
             },
             {
                 title: "How do I verify the other person I'm emailing is not a scammer? ",
@@ -84,7 +85,9 @@ export default function FaqPage() {
                     "other fees almost doubled the price shown for the BnB " +
                     "on their map, I felt the bait-and-switch. I grew frustrated and decided there must be a cheaper " +
                     "and more honest alternative for finding a host for my travels. " +
-                    "Plus there were times when I just want to pay cash and not be tracked. ",
+                    "Plus there were times when I just want to pay cash and not be tracked. " +
+                    "Also, I'd spoken with two hosts on other BnB sites that did not want their exact" +
+                    "hosting location displayed on the map."
             },
             {
                 title: "Who is behind Bosunaire? And what is the tech stack?",
