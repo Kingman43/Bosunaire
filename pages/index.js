@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from "next/link";
 import BoHome from "@/components/bohome.js";
-import YoyoWithBo from "@/components/yoywithbo";
+import YoyoWithBo from "@/components/yoyowithbo";
 
 
 export default function Home() {
@@ -27,15 +27,14 @@ export default function Home() {
                 <h1 className="text-2xl">Welcome to Bosunaire</h1>
 
                 <h2 className="py-4">
-                    The future for connecting travelers and hosts.
+                    Privacy while connecting travelers and hosts.
                     Whether you're seeking a BnB or hoping to find someone to join you for an event,
-                    Bosunaire is here to connect you.
-                    Once connected, you and your connected Bo will determine expenses and other details.
+                    Bosunaire is here to privately connect you.
+                    Once connected, you and your connected Bo will privately determine expenses and other details.
                 </h2>
                 <h2 className="">
-                    Bosunaire encourages relationships.
                     Travelers and hosts will be connected via email. Then you're on your own to iron out the details.
-                    Maybe you work out a cash deal. Maybe you agree to a quid pro quo arrangement.
+                    Maybe you work out a cash agreement. Maybe you agree to a quid pro quo arrangement.
                 </h2>
                 <h2 className=" text-gray-400">
                     ---
@@ -56,9 +55,10 @@ export default function Home() {
                 <h2 className=" text-gray-400 ">
                     ---
                 </h2>
-                <h2 className="">
+                <h2 className="py-2">
                     Bosunaire sets no rules, no costs, no fees. You're on your own (Yoyo) with Bo.
                 </h2>
+
 
                 <YoyoWithBo/>
                 <BoHome/>
