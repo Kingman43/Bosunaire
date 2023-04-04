@@ -21,6 +21,8 @@ export default function Search() {
                     position={position}
                     locations={locations}
                     zoom={zoom}
+                    text={"5 Bosunaire hosts within 10 miles"}
+                    textWords={"5 Bosunaire hosts within 10 miles. Plus a bunch more words/text"}
                 />
             </div>
 

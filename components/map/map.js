@@ -2,6 +2,7 @@ import 'leaflet/dist/leaflet.css'
 import style from '@/styles/Home.module.css';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import { Icon } from "leaflet";
+import L from 'leaflet';
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 
@@ -35,7 +36,16 @@ function Map( props ) {
         iconSize: [24, 17],
         iconAnchor: [12, 9],
         popupAnchor: [0, 0],
+        opacity: .1,
     });
+
+
+    const text = L.divIcon({iconSize: [400, 0], html: props.text, className: "text-2xl text-purple-700 text-opacity-70"});
+
+//    L.marker([props.position], {icon: myIcon}).addTo(map);
+//    var marker = new L.marker([props.position], { opacity: .80 }); //opacity may be set to zero
+//    marker.bindTooltip("My Label", {permanent: true, className: "my-label", offset: [0, 0] });
+//    marker.addTo(map);
 
     return (
         <MapContainer className={style.map}
@@ -47,29 +57,30 @@ function Map( props ) {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {props.locations.map((location) => (
-                <Marker position={location.position}  icon={myIcon}>
-                    <Popup>{location.name}</Popup>
-                </Marker>
-            ))}
+            <Marker position={props.position} icon={text} autoPanOnFocus={false}>
+                <Popup>
+                    {props.textWords}
+                </Popup>
+            </Marker>
+            <Marker position={props.position}  icon={myIcon}>
+                <Popup>
+                    {props.text}
+                </Popup>
+            </Marker>
             <MyComponent />
 
         </MapContainer>
     )
 }
-
-//<Marker position={props.locations[1].position}  icon={myIcon}>
-//    <Popup>{props.locations[0].name}</Popup>
-//</Marker>
-
-//<Marker position={props.position}  icon={myIcon}>
-//    <Popup>{props.mypopup}</Popup>
-//</Marker>
-
-//{props.locations.map((location) => (
-//    <Marker position={location.position} icon={myIcon}>
 //
-//    </Marker>
-//))}
+// <Marker position={props.position}  icon={text}>
+//     <Popup>{props.text}</Popup>
+// </Marker>
+
+// {props.locations.map((location) => (
+//     <Marker position={location.position}  icon={myIcon}>
+//         <Popup>{location.name}</Popup>
+//     </Marker>
+// ))}
 
 export default Map;
