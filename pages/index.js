@@ -27,7 +27,7 @@ export default function Home() {
                 <h1 className="text-2xl">Welcome to Bosunaire</h1>
 
                 <h2 className="py-4">
-                    Privacy while connecting travelers and hosts.
+                    Privately connecting travelers and hosts.
                     Whether you're seeking a BnB or hoping to find someone to join you for an event,
                     Bosunaire is here to privately connect you.
                     Once connected, you and your connected Bo will privately determine expenses and other details.
