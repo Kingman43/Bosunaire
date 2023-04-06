@@ -1,62 +1,74 @@
+import { useEffect, useState } from 'react'
 import 'leaflet/dist/leaflet.css'
 import style from '@/styles/Home.module.css';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from "react-leaflet";
 import { Icon } from "leaflet";
 import L from 'leaflet';
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+import 'node_modules/leaflet-geosearch/dist/geosearch.css';
+import {OpenStreetMapProvider, GeoSearchControl} from 'leaflet-geosearch';
 
-import {useMapEvents} from "react-leaflet";
-import {useState, useEffect} from "react";
-
-
+function SearchBar () {
+    const map  = useMap();
+    try {
+        useEffect(() => {
+            const prov = new OpenStreetMapProvider();
+            const searchControl = new GeoSearchControl({
+                provider: prov,
+                style: 'bar',
+                showMarker: false,
+                retainZoomLevel: true,
+                autoClose: true,
+                searchLabel: 'Bosunaire destination',
+            })
+            map.addControl(searchControl);
+            return () => map.removeControl(searchControl)
+        }, []);
+        return null;
+    } catch (e) {
+        console.log("SearchBar failure:" , e);
+        return null;
+    }
+}
 function MyComponent() {
-    const [zoomLevel, setZoomLevel] = useState( 5); // initial zoom level provided for MapContainer
-    const [center, setCenter] = useState([0,0]); // initial zoom level provided for MapContainer
-
+    const [newZoomLevel, setNewZoomLevel] = useState( 5);
+    const [newCenter, setNewCenter] = useState([0,0]);
     const mapEvents = useMapEvents({
         zoomend: () => {
-            setZoomLevel(mapEvents.getZoom());
+            setNewZoomLevel(mapEvents.getZoom());
         },
         centerend: () => {
-            setCenter(mapEvents.getCenter());
+            setNewCenter(mapEvents.getCenter());
         },
     });
 
-    console.log("ZoomLevel:" ,zoomLevel);
-    console.log("center:" , center);
+    console.log("newZoomLevel:" , newZoomLevel);
+    console.log("newCenter:" , newCenter);
 
     return null
 }
 
 function Map( props ) {
-    //const position = [35.91086, -78.69078]
     const myIcon = new Icon({
         iconUrl: "/boMapIcon.png",
         iconSize: [24, 17],
         iconAnchor: [12, 9],
         popupAnchor: [0, 0],
-        opacity: .1,
     });
-
-
-    const text = L.divIcon({iconSize: [400, 0], html: props.text, className: "text-2xl text-purple-700 text-opacity-70"});
-
-//    L.marker([props.position], {icon: myIcon}).addTo(map);
-//    var marker = new L.marker([props.position], { opacity: .80 }); //opacity may be set to zero
-//    marker.bindTooltip("My Label", {permanent: true, className: "my-label", offset: [0, 0] });
-//    marker.addTo(map);
-
+    const text = L.divIcon({iconSize: [400, 0], html: props.text, className: "text-2xl text-purple-900 text-opacity-90"});
     return (
         <MapContainer className={style.map}
                       center={props.position}
                       zoom={props.zoom}
                       scrollWheelZoom={true}
-                      >
+        >
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
+            <SearchBar/>
+            <MyComponent/>
             <Marker position={props.position} icon={text} autoPanOnFocus={false}>
                 <Popup>
                     {props.textWords}
@@ -67,11 +79,34 @@ function Map( props ) {
                     {props.text}
                 </Popup>
             </Marker>
-            <MyComponent />
-
         </MapContainer>
     )
 }
+
+
+// import {useMapEvents} from "react-leaflet";
+// import {useState} from "react";
+// Kingman - if you add this back, put <MyComponent/> just before </MapContainer>
+// function MyComponent() {
+//     const [zoomLevel, setZoomLevel] = useState( 5); // initial zoom level provided for MapContainer
+//     const [center, setCenter] = useState([0,0]); // initial zoom level provided for MapContainer
+//
+//     const mapEvents = useMapEvents({
+//         zoomend: () => {
+//             setZoomLevel(mapEvents.getZoom());
+//         },
+//         centerend: () => {
+//             setCenter(mapEvents.getCenter());
+//         },
+//     });
+//
+//     console.log("ZoomLevel:" ,zoomLevel);
+//     console.log("center:" , center);
+//
+//     return null
+// }
+
+
 //
 // <Marker position={props.position}  icon={text}>
 //     <Popup>{props.text}</Popup>
