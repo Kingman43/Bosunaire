@@ -7,13 +7,14 @@ import L from 'leaflet';
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import 'node_modules/leaflet-geosearch/dist/geosearch.css';
-import {OpenStreetMapProvider, GeoSearchControl} from 'leaflet-geosearch';
+import {OpenStreetMapProvider, EsriProvider, GeoSearchControl} from 'leaflet-geosearch';
 
 function SearchBar () {
     const map  = useMap();
     try {
         useEffect(() => {
-            const prov = new OpenStreetMapProvider();
+//            const prov = new OpenStreetMapProvider();
+            const prov = new EsriProvider();
             const searchControl = new GeoSearchControl({
                 provider: prov,
                 style: 'bar',
