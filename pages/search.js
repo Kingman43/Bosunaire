@@ -1,28 +1,42 @@
 import BoHome from "@/components/bohome.js";
 import Map from '@/components/map';
+import {useState} from "react";
+import {mapContext} from "@/components/Context";
+
 export default function Search() {
-    const locations = [
-        {"name": "Mark King was here", position: [35.91086, -78.69078]},
-        {"name": "Beth Allen was here", position: [35.7, -78.4]},
-        {"name": "A third  test marker", position: [35.93, -78.4]},
-        {"name": "A fourth test marker", position: [35.8, -78.69]},
-        {"name": "A fifth test marker", position: [35.78, -78.6]},
-        {"name": "A sixth test marker", position: [35.83, -78.65]},
-    ];
-    const position = [35.91086, -78.69078];
-    const zoom = 10;
+//    37.0902° N, 95.7129° W
+
+    const [position, setNewPosition] = useState( [37.0902, -95.7129]);
+    const [markerPosition, setNewMarkerPosition] = useState( [37.0902, -95.7129]);
+    const zoom = 4;
+    function sayHello() {
+        console.log('You clicked me! NewPostion:', position);
+//        setNewPosition(newPosition);
+        getNewValues();
+    }
+
+    function getNewValues () {
+        console.log("get the new values and set them");
+        setNewMarkerPosition(position);
+    }
+
+    function SubmitButton () {
+            return (
+                <button onClick={sayHello}> ReSubmit </button>
+            )
+    }
 
     return(
+        <mapContext.Provider value={{position, setNewPosition}}>
         <div className="mx-auto max-w-prose " >
-            <h1 className="p-3">Testing out some map stuff</h1>
-
+            <SubmitButton/>
             <div>
                 <Map
                     position={position}
-                    locations={locations}
                     zoom={zoom}
                     text={"5 Bosunaire hosts within 10 miles"}
                     textWords={"5 Bosunaire hosts within 10 miles. Plus a bunch more words/text"}
+                    markerPosition={markerPosition}
                 />
             </div>
 
@@ -30,7 +44,6 @@ export default function Search() {
                 <BoHome/>
             </div>
         </div>
-
-
+        </mapContext.Provider>
     )
 }
