@@ -1,4 +1,4 @@
-import {useContext, useEffect} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import 'leaflet/dist/leaflet.css'
 import style from '@/styles/Home.module.css';
 import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from "react-leaflet";
@@ -11,6 +11,7 @@ import {OpenStreetMapProvider, EsriProvider, GeoSearchControl} from 'leaflet-geo
 
 import {mapContext} from "@/components/Context";
 
+let numRenders = 0;
 function Map( props ) {
     const myIcon = new Icon({
         iconUrl: "/boMapIcon.png",
@@ -19,7 +20,12 @@ function Map( props ) {
         popupAnchor: [0, 0],
     });
 
-    let {position, setNewPosition} = useContext(mapContext);
+    let {position, setPosition, markerPosition} = useContext(mapContext);
+    const [zoom, setZoom] = useState( 4);
+
+    function searchEventHandler(result) {
+        props.searchPerformed(result.location);
+    }
 
     function SearchBar () {
         const map  = useMap();
@@ -30,26 +36,32 @@ function Map( props ) {
                 provider: prov,
                 style: 'bar',
                 showMarker: false,
-                retainZoomLevel: true,
                 autoClose: true,
                 searchLabel: 'Search destination for Bosunaires',
+                //retainZoomLevel: true,
             })
             map.addControl(searchControl);
             return () => map.removeControl(searchControl)
         }, []);
+
+        if (numRenders === 0) {
+            map.on('geosearch/showlocation', searchEventHandler);
+            numRenders++;
+        }
+
         return null;
     }
 
     function MyComponent() {
         const mapEvents = useMapEvents({
             zoomend: () => {
-//                setNewZoomLevel(mapEvents.getZoom());
+                setZoom(mapEvents.getZoom());
             },
             moveend: () => {
-                setNewPosition(mapEvents.getCenter());
+                setPosition(mapEvents.getCenter());
             },
         });
-//        console.log("newZoomLevel:" , newZoomLevel);
+        console.log("zoom:" , zoom);
         console.log("newCenter:" , position);
         return null
     }
@@ -60,8 +72,8 @@ function Map( props ) {
     const text = L.divIcon({iconSize: [400, 0], html: props.text, className: "text-2xl text-purple-900 text-opacity-90"});
     return (
         <MapContainer className={style.map}
-                      center={props.position}
-                      zoom={props.zoom}
+                      center={position}
+                      zoom={zoom}
                       scrollWheelZoom={true}
         >
             <TileLayer
@@ -70,12 +82,12 @@ function Map( props ) {
             />
             <SearchBar/>
             <MyComponent/>
-            <Marker position={props.markerPosition} icon={text} autoPanOnFocus={false}>
+            <Marker position={markerPosition} icon={text} autoPanOnFocus={false}>
                 <Popup>
                     {props.textWords}
                 </Popup>
             </Marker>
-            <Marker position={props.markerPosition}  icon={myIcon}>
+            <Marker position={markerPosition}  icon={myIcon}>
                 <Popup>
                     {props.text}
                 </Popup>

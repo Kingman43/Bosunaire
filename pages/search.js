@@ -3,40 +3,48 @@ import Map from '@/components/map';
 import {useState} from "react";
 import {mapContext} from "@/components/Context";
 
+let numHosts = 1;
+let origPosition = [37.0902, -95.7129];
 export default function Search() {
 //    37.0902° N, 95.7129° W
 
-    const [position, setNewPosition] = useState( [37.0902, -95.7129]);
-    const [markerPosition, setNewMarkerPosition] = useState( [37.0902, -95.7129]);
-    const zoom = 4;
-    function sayHello() {
+    const [myText, setMyText] = useState(numHosts + " Bosunaire hosts with 10 miles");
+    const [position, setPosition] = useState( origPosition);
+    const [markerPosition, setMarkerPosition] = useState( origPosition);
+
+    function reSubmit() {
         console.log('You clicked me! NewPostion:', position);
-//        setNewPosition(newPosition);
+        setMarkerPosition(position);
         getNewValues();
     }
-
+    function searchPerformed (location) {
+        getNewValues();
+        setMarkerPosition([location.y, location.x]);
+    }
     function getNewValues () {
-        console.log("get the new values and set them");
-        setNewMarkerPosition(position);
+        numHosts++;
+        setMyText(numHosts + " Bosunaire Hosts within 10 miles");
     }
 
     function SubmitButton () {
-            return (
-                <button onClick={sayHello}> ReSubmit </button>
-            )
+
+        if (position.lat !== markerPosition.lat || position.lng !== markerPosition.lng) {
+            return (<button onClick={reSubmit}> ReSubmit </button>)
+        } else
+            return null;
     }
 
+
     return(
-        <mapContext.Provider value={{position, setNewPosition}}>
+        <mapContext.Provider value={{position, setPosition, markerPosition, setMarkerPosition}}>
         <div className="mx-auto max-w-prose " >
             <SubmitButton/>
             <div>
                 <Map
-                    position={position}
-                    zoom={zoom}
-                    text={"5 Bosunaire hosts within 10 miles"}
-                    textWords={"5 Bosunaire hosts within 10 miles. Plus a bunch more words/text"}
+                    text={myText}
+                    textWords={myText}
                     markerPosition={markerPosition}
+                    searchPerformed={searchPerformed}
                 />
             </div>
 
