@@ -1,5 +1,6 @@
 import BoHome from "@/components/bohome.js";
 import MyButton from "@/components/mybutton.js";
+import MySelect from "@/components/myselect.js";
 import Map from '@/components/map';
 import {useState} from "react";
 import {mapContext} from "@/components/Context";
@@ -18,6 +19,16 @@ export default function Search() {
     const [myText, setMyText] = useState(numHosts + " Bosunaire hosts with 10 miles");
     const [position, setPosition] = useState( origPosition);
     const [markerPosition, setMarkerPosition] = useState( origPosition);
+    const [listingType, setType] = useState( 0);
+    const [bShowSearchButton, setShowButton] = useState( false);
+    const [showModal, setShowModal] = useState(false);
+
+    const listingTypes = [
+        { label: 'All Listings', value: 0 },
+        { label: 'Homes for Sale', value: 1 },
+        { label: 'Bed and Breakfasts', value: 2 },
+        { label: 'Event Hosts', value: 3 },
+    ];
 
     function reSubmit() {
         console.log('You clicked me! NewPostion:', position);
@@ -32,21 +43,34 @@ export default function Search() {
     }
     function getNewValues () {
         numHosts++;
+        setShowButton(false);
         setMyText(numHosts + " Bosunaire Hosts within 10 miles");
+    }
+    const newListingType = (event) => {
+        setType(event.target.value);
+        setShowButton(true)
+        setShowModal(false);
+    };
+    function filterModal () {
+        setShowModal(true);
+    }
+    function FilterButton () {
+            return <MyButton func={filterModal} text='Filter'/>
     }
 
     function SubmitButton () {
         if ( (round(position.lat, 4) !== round(markerPosition.lat,4) ) ||
-             (round(position.lng,4) !== round(markerPosition.lng,4) ) ) {
-            {
+             (round(position.lng,4) !== round(markerPosition.lng,4) ) ||
+                bShowSearchButton) {
                 console.log("pos.lat:", round(position.lat,3));
                 console.log("mar.lat:", round(markerPosition.lat,3));
                 console.log("pos.lng:", round(position.lng,3));
                 console.log("mar.lng:", round(markerPosition.lng,3));
-                return <MyButton func={reSubmit}/>
-            }
-        } else
+                return <MyButton func={reSubmit} text='Search Again'/>
+        } else {
             return null;
+            // return <MyButton text='Search is up-to-date'/>
+        }
     }
 
     return(
@@ -60,7 +84,24 @@ export default function Search() {
                     searchPerformed={searchPerformed}
                 />
             </div>
-            <SubmitButton/>
+
+            <div className="mx-auto max-w-prose flex justify-around items-center">
+                <SubmitButton/>
+                <FilterButton/>
+            </div>
+
+                {showModal ?
+                    <div>
+                        <MySelect
+                            options={listingTypes}
+                            value={listingType}
+                            onChange={newListingType}
+                        />
+                    </div>
+                    : null
+                }
+
+
             <div className="pt-3">
                 <BoHome/>
             </div>

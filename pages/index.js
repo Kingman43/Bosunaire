@@ -9,10 +9,10 @@ export default function Home() {
     <>
       <Head>
 
-          <title>Bosunaire - Privately list your house for sale</title>
+          <title>Bosunaire - Privately sell, rent or BnB your home</title>
           <meta
               name="description"
-              content="Sell your house without your neighbors or friends ever knowing it was listed"
+              content="No one needs to know what you do inside your home"
               key="desc"
           />
 
@@ -30,19 +30,22 @@ export default function Home() {
         <main>
             <div className="mx-auto max-w-prose py-4" >
                 <h1 className="text-2xl">Welcome to Bosunaire</h1>
-                <h1 className=" text-xl pt-4">
-                    Sell your home with absolute privacy.
-                </h1>
 
                 <h2 className="py-4">
-                    Privately connecting travelers and hosts.
-                    Whether you're seeking a BnB or hoping to find someone to join you for an event,
-                    Bosunaire is here to privately connect you.
+                    Privately connecting homeowners, buyers, hosts, and travelers.
+                    Whether you're considering selling your home, renting space, hosting a BnB,
+                    or simply hoping to find someone to join you for an event,
+                    Bosunaire is here to connect you.
                     Once connected, you and your connected Bo will privately determine expenses and other details.
                 </h2>
+                <h2 className="py-4">
+                    Privacy is paramount. Your friends and neighbors will never know you've posted a listing
+                    on Bosunaire.
+                </h2>
                 <h2 className="">
-                    Travelers and hosts will be connected via email. Then you're on your own to iron out the details.
-                    Maybe you work out a cash agreement. Maybe you agree to a quid pro quo arrangement.
+                    Buyers and travelers will enter search criteria. If your listing/post falls within
+                    their search filter, we will email you.
+                    Then it's up to you whether you connect via email.
                 </h2>
                 <h2 className=" text-gray-400">
                     ---
