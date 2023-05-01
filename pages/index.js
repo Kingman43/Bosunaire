@@ -8,8 +8,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bosunaire</title>
-        <meta name="description" content="Bosunaire - Yoyo with Bo" />
+
+          <title>Bosunaire - Privately list your house for sale</title>
+          <meta
+              name="description"
+              content="Sell your house without your neighbors or friends ever knowing it was listed"
+              key="desc"
+          />
 
           <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -25,6 +30,9 @@ export default function Home() {
         <main>
             <div className="mx-auto max-w-prose py-4" >
                 <h1 className="text-2xl">Welcome to Bosunaire</h1>
+                <h1 className=" text-xl pt-4">
+                    Sell your home with absolute privacy.
+                </h1>
 
                 <h2 className="py-4">
                     Privately connecting travelers and hosts.
@@ -58,7 +66,6 @@ export default function Home() {
                 <h2 className="py-2">
                     Bosunaire sets no rules, no costs, no fees. You're on your own (Yoyo) with Bo.
                 </h2>
-
 
                 <YoyoWithBo/>
                 <BoHome/>
