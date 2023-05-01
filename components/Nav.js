@@ -15,19 +15,18 @@ export default function Nav() {
                 />
             </Link>
 
-            <Link className=" hover:text-my-nav-hover " href="/host" title="Become a Bosunaire Host">
-                Host
-            </Link>
 
             <Link className=" hover:text-my-nav-hover " href="/search" title="Find houses for sale">
                 Search
             </Link>
 
-
             <Link className=" hover:text-my-nav-hover " href="/faqpage" title="Frequently asked questions">
                 FAQ
             </Link>
 
+            <Link className=" hover:text-my-nav-hover " href="/host" title="Become a Bosunaire Host / Seller">
+                Post
+            </Link>
 
             <ul className="pr-1">
                 {!user && (
