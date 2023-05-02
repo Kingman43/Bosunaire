@@ -31,6 +31,9 @@ export default function Home() {
             <div className="mx-auto max-w-prose py-4" >
                 <h1 className="text-2xl">Welcome to Bosunaire</h1>
 
+                <h2 className="text-sm text-red-600 pt-2">Currently under development</h2>
+                <h2 className="text-sm text-red-600">Launching August 1st, 2023</h2>
+
                 <h2 className="py-4">
                     Privately connecting homeowners and hosts to buyers and travelers.
                     Whether you're considering selling your home, renting space, hosting a BnB,
