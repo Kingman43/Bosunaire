@@ -9,8 +9,8 @@ export default function Examples() {
 
             <h2 className="py-2">
                 <b>Privately list your home for sale: </b>
-                List your house for sale on Bosunaire and we will email you when your house matches a user
-                looking to buy a house similar to yours. The exact location of your house is never made public.
+                List your house on Bosunaire and we will email you when your house matches a user
+                looking to buy a house similar to yours. The location or specifics of your house is never made public.
                 You choose who you want to email with specifics.
             </h2>
 
