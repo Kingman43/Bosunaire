@@ -32,7 +32,7 @@ export default function Home() {
                 <h1 className="text-2xl">Welcome to Bosunaire</h1>
 
                 <h2 className="py-4">
-                    Privately connecting homeowners, buyers, hosts, and travelers.
+                    Privately connecting homeowners and hosts to buyers and travelers.
                     Whether you're considering selling your home, renting space, hosting a BnB,
                     or simply hoping to find someone to join you for an event,
                     Bosunaire is here to connect you.
@@ -41,8 +41,6 @@ export default function Home() {
                 <h2 className="py-4">
                     Privacy is paramount. Your friends and neighbors will never know you've posted a listing
                     on Bosunaire.
-                </h2>
-                <h2 className="">
                     Buyers and travelers will enter search criteria. If your listing/post falls within
                     their search filter, we will email you.
                     Then it's up to you whether you connect via email.

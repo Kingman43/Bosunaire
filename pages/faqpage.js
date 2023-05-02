@@ -18,20 +18,20 @@ export default function FaqPage() {
                     "We encourage users to sign in to bosunaire.com for higher response rates from hosts. " +
                     "Signing in gives the hosts confidence that you " +
                     "are 'real'. Also your Bosunaire user rating and user reviews will be included in the email " +
-                    "to potential hosts. "
+                    "to potential hosts/homeowners. "
             },
             {
                 title: "What does Bosunaire actually mean?",
                 content: "Bosunaire derives from 'Bosun'. A bosun is a senior crew member of a boat or ship. " +
                     "The bosun supervises the deck crew including planning, scheduling and assigning tasks. " +
-                    "Bosunaire is a made-up word refering to anyone that 'YOYOs' with another Bosunaire member. " +
+                    "Bosunaire is a made-up word referring to anyone that 'YOYOs' with another Bosunaire member. " +
                     "Users of Bosunaire.com may affectionately call each other 'Bo'. ",
             },
             {
                 title: "What is 'Yoyo with Bo'?",
                 content: "Once bosunaire.com connects you to another user, 'You're On Your Own' with the other user. " +
                     "Bosunaire.com is no longer involved. " +
-                    "You and your connected Bo will discuss terms, payments, etc ... on your own. "
+                    "You and your connected Bo will discuss terms, payments, etc ... you're on your own."
             },
             {
                 title: "Is there a Bosunaire app I can download to my phone?",
@@ -39,7 +39,7 @@ export default function FaqPage() {
                     "Downloading an app exposes your personal data. " +
                     "With Bo your privacy is paramount. " +
                     "Also, as a single software developer, a website is much easier to " +
-                    "maintain than phone apps ",
+                    "maintain than phone apps",
             },
             {
                 title: "Can you tell me more about privacy?",
@@ -49,7 +49,7 @@ export default function FaqPage() {
                     "your profile/reviews/rating are shared with potential hosts. " +
                     "Hosts that respond to you via email are encouraged to attach their profile containing " +
                     "user reviews and user ratings. " +
-                    "Agreements are performed via EMails between travellers and hosts."
+                    "Agreements are performed via EMails between homeowners/hosts and buyers/travellers."
             },
             {
                 title: "How do I verify the other person I'm emailing is not a scammer? ",
@@ -64,30 +64,26 @@ export default function FaqPage() {
             },
             {
                 title: "Before I send money to a Bo host, what should I think about? ",
-                content: "Foremost, think about exposure. Keep your monetary exposure to a minimum. " +
+                content: "If you're buying a house, this is likely mute, as you'll follow the normal steps of a FSBO. " +
+                    "However, if you're renting a Bed and Breakfast or similar, think about exposure. " +
+                    "Keep your monetary exposure to a minimum. " +
                     "Bosunaire suggests the two Bo members agree to a total cost of the host's service. " +
                     "The traveler then sends the host a minimal amount to reserve the date/service. This reduces the " +
                     "traveler's monetary exposure. Shortly after the traveler arrives, full payment is likely made. " +
                     "But, again, the details are up to the two connected Bo members. ",
             },
             {
-                title: "Filler for future",
-                content: "Filler ",
-            },
-            {
-                title: "Filler for future",
-                content: "Filler ",
-            },
-            {
                 title: "Why did you develop bosunaire.com?",
-                content: "I was a frequent user of the two other online BnB reservation " +
+                content:
+                    "I was a frequent user of the two other online BnB reservation " +
                     "sites. The options were often limited. Then, as their corporate fees, cleaning fees, taxes and " +
                     "other fees almost doubled the price shown for the BnB " +
                     "on their map, I felt the bait-and-switch. I grew frustrated and decided there must be a cheaper " +
                     "and more honest alternative for finding a host for my travels. " +
                     "Plus there were times when I just want to pay cash and not be tracked. " +
                     "Also, I'd spoken with two hosts on other BnB sites that did not want their exact" +
-                    "hosting location displayed on the map."
+                    "hosting location displayed on the map. Also, I've wanted to put my house on the market for sale, " +
+                    "but I don't want the questions from friends and neighbors."
             },
             {
                 title: "Who is behind Bosunaire? And what is the tech stack?",
@@ -96,8 +92,8 @@ export default function FaqPage() {
                     "The React app uses Google Firebase Authentication and Google Firestore database. " +
                     "Being a lonely software developer putting up a website, " +
                     "I wanted to make this as easy on me as possible. There are no phone apps. I coded the Bosunaire " +
-                    "website simply to connect travelers with hosts with no hidden fees." +
-                    " After that, I'm no longer involved. " +
+                    "website simply to connect travelers with hosts with no hidden fees. " +
+                    "After that, I'm no longer involved. " +
                     "The AWS and Google costs are minimal to me, so I don't need compensation. " +
                     "I'm probably cheering each time a new user signs up. ",
             },

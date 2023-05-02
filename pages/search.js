@@ -76,6 +76,7 @@ export default function Search() {
     return(
         <mapContext.Provider value={{position, setPosition, markerPosition, setMarkerPosition}}>
         <div className="mx-auto max-w-prose " >
+            Testing out some map stuff
             <div>
                 <Map
                     text={myText}
