@@ -61,12 +61,10 @@ function Map( props ) {
                 setPosition(mapEvents.getCenter());
             },
         });
-        console.log("zoom:" , zoom);
-        console.log("newCenter:" , position);
+ //       console.log("zoom:" , zoom);
+ //       console.log("newCenter:" , position);
         return null
     }
-
-
 
 //    const [position, setPosition] = useState(props.position ); // set default position
     const text = L.divIcon({iconSize: [400, 0], html: props.text, className: "text-2xl text-purple-900 text-opacity-90"});
