@@ -95,7 +95,8 @@ export default function FaqPage() {
                     "website simply to connect travelers with hosts with no hidden fees. " +
                     "After that, I'm no longer involved. " +
                     "The AWS and Google costs are minimal to me, so I don't need compensation. " +
-                    "I'm probably cheering each time a new user signs up. ",
+                    "I'm probably cheering each time a new user signs up. Email me with questions " +
+                    "or comments:  bosunaire@gmail.com",
             },
 
         ],
