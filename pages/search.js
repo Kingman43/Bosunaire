@@ -20,6 +20,7 @@ export default function Search() {
     const [position, setPosition] = useState( origPosition);
     const [markerPosition, setMarkerPosition] = useState( origPosition);
     const [bShowSearchButton, setShowButton] = useState( false);
+    const [listingType, setListingType] = useState( Number(0));
 
     const parms = {};
 
@@ -46,25 +47,22 @@ export default function Search() {
         if ( (round(position.lat, 3) !== round(markerPosition.lat,3) ) ||
             (round(position.lng,3) !== round(markerPosition.lng,3) ) ||
             bShowSearchButton) {
-            console.log("pos.lat:", round(position.lat,3));
-            console.log("mar.lat:", round(markerPosition.lat,3));
-            console.log("pos.lng:", round(position.lng,3));
-            console.log("mar.lng:", round(markerPosition.lng,3));
-            console.log("bShowSearchButton:", bShowSearchButton);
+//            console.log("pos.lat:", round(position.lat,3));
+//            console.log("mar.lat:", round(markerPosition.lat,3));
+//            console.log("pos.lng:", round(position.lng,3));
+//            console.log("mar.lng:", round(markerPosition.lng,3));
+//            console.log("bShowSearchButton:", bShowSearchButton);
             return <MyButton func={reSubmit} text='Search Again' bActive={true}/>
         } else {
             return <MyButton func={reSubmit} text='Search Again' bActive={false}/>
             // return <MyButton text='Search is up-to-date'/>
         }
     }
-    function FilterChanged() {
-        setShowButton(true);
-    }
-    function FilterCancel() {
 
-    }
     return(
-        <mapContext.Provider value={{position, setPosition, markerPosition, setMarkerPosition}}>
+        <mapContext.Provider
+            value={{position, setPosition, markerPosition, setMarkerPosition,
+                setShowButton, listingType, setListingType}}>
             <div className="mx-auto max-w-prose " >
                 Testing out some map stuff
                 <div>
@@ -80,7 +78,7 @@ export default function Search() {
                     <SubmitButton/>
                 </div>
 
-                <MapFilter onFilterChange={FilterChanged} onCancel={FilterCancel} parms={parms}/>
+                <MapFilter />
 
 
                 <div className="pt-3">
