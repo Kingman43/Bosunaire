@@ -5,10 +5,10 @@ import {mapContext} from "@/components/Context";
 
 function MapFilter() {
     const listingTypes = [
-        { label: 'All Listings', value: Number(0) },
-        { label: 'Homes for Sale', value: Number (1) },
-        { label: 'Bed and Breakfasts', value: Number (2) },
-        { label: 'Event Hosts', value: Number(3) },
+        { label: 'All Listings', value: 0 },
+        { label: 'Homes for Sale', value: 1 },
+        { label: 'Bed and Breakfasts', value: 2 },
+        { label: 'Event Hosts', value: 3 },
     ];
 //    const [listingType, setType] = useState( 0);
     let {listingType, setListingType, setShowButton} = useContext(mapContext);
@@ -29,11 +29,11 @@ function MapFilter() {
         setShowButton(true);
     };
     function FilterParms () {
-        if (listingType === 1)
+        if (listingType == 1)
             return homesForSale();
-        else if (listingType === 2)
+        else if (listingType == 2)
             return bedAndBreakfast();
-        else if (listingType === 3)
+        else if (listingType == 3)
             return eventHost();
 
     }

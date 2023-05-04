@@ -20,7 +20,7 @@ export default function Search() {
     const [position, setPosition] = useState( origPosition);
     const [markerPosition, setMarkerPosition] = useState( origPosition);
     const [bShowSearchButton, setShowButton] = useState( false);
-    const [listingType, setListingType] = useState( Number(0));
+    const [listingType, setListingType] = useState( 0);
 
     const parms = {};
 
