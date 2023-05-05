@@ -1,39 +1,63 @@
 import MySelect from "@/components/myselect.js";
 import MyCheckbox from "@/components/myCheckbox";
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import {mapContext} from "@/components/Context";
 
 function MapFilter() {
     const listingTypes = [
         { label: 'All Listings', value: 0 },
         { label: 'Homes for Sale', value: 1 },
-        { label: 'Bed and Breakfasts', value: 2 },
-        { label: 'Event Hosts', value: 3 },
+        { label: 'Homes for Rent', value: 2 },
+        { label: 'Bed and Breakfasts', value: 3 },
+        { label: 'Event Hosts', value: 4 },
     ];
 //    const [listingType, setType] = useState( 0);
-    let {listingType, setListingType, setShowButton} = useContext(mapContext);
-    const [checkedOneBedroom, setCheckedOneBedroom] = useState(true);
-    const [checkedTwoBedroom, setCheckedTwoBedroom] = useState(true);
+    let {setShowButton, filter, setFilter} = useContext(mapContext);
+
+    const newListingType = (event) => {
+        setFilter(filter => ({
+            ...filter,
+            ...{listingType:event.target.value}
+        }));
+        setShowButton(true);
+    };
 
     const handleChangeOneBedroom = () => {
-        setCheckedOneBedroom(!checkedOneBedroom);
+        setFilter(filter => ({
+            ...filter,
+            ...{oneBedroom:!filter.oneBedroom}
+        }));
         setShowButton(true);
     };
     const handleChangeTwoBedroom = () => {
-        setCheckedTwoBedroom(!checkedTwoBedroom);
+        setFilter(filter => ({
+            ...filter,
+            ...{twoBedroom:!filter.twoBedroom}
+        }));
         setShowButton(true);
     };
-
-    const newListingType = (event) => {
-        setListingType(event.target.value);
+    const handleChangeOneBath = () => {
+        setFilter(filter => ({
+            ...filter,
+            ...{oneBath:!filter.oneBath}
+        }));
+        setShowButton(true);
+    };
+    const handleChangeOneAndHalfBath = () => {
+        setFilter(filter => ({
+            ...filter,
+            ...{oneAndHalfBath:!filter.oneAndHalfBath}
+        }));
         setShowButton(true);
     };
     function FilterParms () {
-        if (listingType == 1)
+        if (filter.listingType == 1)
             return homesForSale();
-        else if (listingType == 2)
+        else if (filter.listingType == 2)
+            return homesForRent();
+        else if (filter.listingType == 3)
             return bedAndBreakfast();
-        else if (listingType == 3)
+        else if (filter.listingType == 4)
             return eventHost();
 
     }
@@ -42,12 +66,29 @@ function MapFilter() {
             <div>
                 <div className="flex flex-row justify-around items-center text-purple-900">
                     <div className=" flex flex-col  ">
-                        <MyCheckbox label=" 1 Bedroom" value={checkedOneBedroom} onChange={handleChangeOneBedroom}/>
-                        <MyCheckbox label=" 2 Bedrooms" value={checkedTwoBedroom} onChange={handleChangeTwoBedroom}/>
+                        <MyCheckbox label=" 1 Bedroom" value={filter.oneBedroom} onChange={handleChangeOneBedroom}/>
+                        <MyCheckbox label=" 2 Bedrooms" value={filter.twoBedroom} onChange={handleChangeTwoBedroom}/>
                     </div>
                     <div className=" flex flex-col  ">
-                        <MyCheckbox label=" 1 Bath" value={checkedOneBedroom} onChange={handleChangeOneBedroom}/>
-                        <MyCheckbox label=" 1.5 Bath" value={checkedTwoBedroom} onChange={handleChangeTwoBedroom}/>
+                        <MyCheckbox label=" 1 Bath" value={filter.oneBath} onChange={handleChangeOneBath}/>
+                        <MyCheckbox label=" 1.5 Bath" value={filter.oneAndHalfBath} onChange={handleChangeOneAndHalfBath}/>
+                    </div>
+                </div>
+                <div className="text-xl">Show Additional Parms</div>
+            </div>
+        )
+    }
+    function homesForRent () {
+        return (
+            <div>
+                <div className="flex flex-row justify-around items-center text-purple-900">
+                    <div className=" flex flex-col  ">
+                        <MyCheckbox label=" 1 Bedroom" value={filter.oneBedroom} onChange={handleChangeOneBedroom}/>
+                        <MyCheckbox label=" 2 Bedrooms" value={filter.twoBedroom} onChange={handleChangeTwoBedroom}/>
+                    </div>
+                    <div className=" flex flex-col  ">
+                        <MyCheckbox label=" 1 Bath" value={filter.oneBath} onChange={handleChangeOneBath}/>
+                        <MyCheckbox label=" 1.5 Bath" value={filter.oneAndHalfBath} onChange={handleChangeOneAndHalfBath}/>
                     </div>
                 </div>
                 <div className="text-xl">Show Additional Parms</div>
@@ -74,7 +115,7 @@ function MapFilter() {
             <div className="text-l text-purple-900">
                 <MySelect
                     options={listingTypes}
-                    value={listingType}
+                    value={filter.listingType}
                     onChange={newListingType}
                 />
             </div>

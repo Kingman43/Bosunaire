@@ -12,6 +12,13 @@ let origPosition = {
     lat: 37.0902,
     lng: -95.7129,
 };
+const initFilterParms = {
+    listingType:0,
+    oneBedroom:true,
+    twoBedroom:true,
+    oneBath:true,
+    oneAndHalfBath:true
+}
 
 export default function Search() {
 //    37.0902° N, 95.7129° W
@@ -20,9 +27,7 @@ export default function Search() {
     const [position, setPosition] = useState( origPosition);
     const [markerPosition, setMarkerPosition] = useState( origPosition);
     const [bShowSearchButton, setShowButton] = useState( false);
-    const [listingType, setListingType] = useState( 0);
-
-    const parms = {};
+    const [filter, setFilter] = useState(initFilterParms);
 
     function reSubmit() {
         console.log('You clicked me! NewPostion:', position);
@@ -62,7 +67,7 @@ export default function Search() {
     return(
         <mapContext.Provider
             value={{position, setPosition, markerPosition, setMarkerPosition,
-                setShowButton, listingType, setListingType}}>
+                setShowButton, filter, setFilter}}>
             <div className="mx-auto max-w-prose " >
                 Testing out some map stuff
                 <div>
