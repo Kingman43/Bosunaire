@@ -9,23 +9,23 @@ export default function FaqPage() {
             {
                 title: "Can I use bosunaire.com without signing in?",
                 content: "Yes. " +
-                    "Simply click 'Search' at the top. You can search the map and get a feel for how " +
+                    "Simply click 'Search' at the top. You may search the map and get a feel for how " +
                     "the tool works. If you actually want to connect to another user without signing in, " +
-                    "Bosunaire will require an email address in the 'Notes to host' field. " +
-                    "In this case, we will email only the Bo hosts that accept non-verified Bo users. " +
+                    "Bosunaire will require an email address. " +
+                    "If not signed in, we will email only the Bo hosts that accept non-verified Bo users. " +
                     "Also, 'Non-verified user' will be part of the subject field in the email we send to Bo hosts. " +
                     "You are much less likely to get a response from a Bo host if you are not signed in. " +
                     "We encourage users to sign in to bosunaire.com for higher response rates from hosts. " +
                     "Signing in gives the hosts confidence that you " +
-                    "are 'real'. Also your Bosunaire user rating and user reviews will be included in the email " +
-                    "to potential hosts/homeowners. "
+                    "are 'real'. Also, at your discretion, your Bosunaire user rating and user reviews may be " +
+                    "included in the email to potential hosts/homeowners."
             },
             {
                 title: "What does Bosunaire actually mean?",
                 content: "Bosunaire derives from 'Bosun'. A bosun is a senior crew member of a boat or ship. " +
-                    "The bosun supervises the deck crew including planning, scheduling and assigning tasks. " +
+                    "The bosun supervises much of the crew including planning, scheduling and assigning tasks. " +
                     "Bosunaire is a made-up word referring to anyone that 'YOYOs' with another Bosunaire member. " +
-                    "Users of Bosunaire.com may affectionately call each other 'Bo'. ",
+                    "Users of Bosunaire.com may affectionately call each other 'Bo'.",
             },
             {
                 title: "What is 'Yoyo with Bo'?",
@@ -56,9 +56,8 @@ export default function FaqPage() {
                 content: "Remember, you're on you own, so that's a VERY good question. " +
                     "Make sure the other Bo sends you their profile, user reviews and user ratings. " +
                     "Their profile should contain a link to at least one social media for the user. " +
-                    "Verify the user via face-to-face real-time video and match it with their social media. " +
-                    "Ask to friend them on social media. You can always unfriend after your event with the host. " +
-                    "If they don't want to friend you on social media, beware. " +
+                    "Ask to verify the user via face-to-face real-time video and match it with their social media. " +
+                    "For larger transactions, possibly ask to friend them on social media. " +
                     "If their social media has limited history, beware. " +
                     "Keep your monetary exposure to a minimum. ",
             },
@@ -75,28 +74,30 @@ export default function FaqPage() {
             {
                 title: "Why did you develop bosunaire.com?",
                 content:
-                    "I was a frequent user of the two other online BnB reservation " +
+                    "To solve to two problems, mainly privacy regarding what I do with my house/home. " +
+                    "One, I wanted to list my home for sale without my friends " +
+                    "and neighbors asking questions. " +
+                    "Secondly, I was a frequent user of the two other online BnB reservation " +
                     "sites. The options were often limited. Then, as their corporate fees, cleaning fees, taxes and " +
                     "other fees almost doubled the price shown for the BnB " +
                     "on their map, I felt the bait-and-switch. I grew frustrated and decided there must be a cheaper " +
                     "and more honest alternative for finding a host for my travels. " +
                     "Plus there were times when I just want to pay cash and not be tracked. " +
-                    "Also, I'd spoken with two hosts on other BnB sites that did not want their exact" +
-                    "hosting location displayed on the map. Also, I've wanted to put my house on the market for sale, " +
-                    "but I don't want the questions from friends and neighbors."
+                    "Also, I'd spoken with two hosts on other BnB sites that did not want their pictures or even their general " +
+                    "location displayed to the public. These reasons are why Bosunaire leans towards privacy over ease-of-use " +
+                    "during the search process.",
             },
             {
                 title: "Who is behind Bosunaire? And what is the tech stack?",
                 content: "I'm a software developer in Raleigh, NC, USA. " +
-                    "Bosunaire.com is a serverless React client app. It's hosted on AWS Amplify. " +
-                    "The React app uses Google Firebase Authentication and Google Firestore database. " +
-                    "Being a lonely software developer putting up a website, " +
-                    "I wanted to make this as easy on me as possible. There are no phone apps. I coded the Bosunaire " +
-                    "website simply to connect travelers with hosts with no hidden fees. " +
+                    "Bosunaire.com is a Next.js (React server-side-rendering) app using OpenStreetMaps. " +
+                    "It's hosted on AWS Amplify. " +
+                    "The Next.js app uses Google Firebase Authentication and Google Firestore database. " +
+                    "There are no phone apps. The Bosunaire " +
+                    "website was coded simply to connect hosts with buyers/travelers with no hidden fees. " +
                     "After that, I'm no longer involved. " +
                     "The AWS and Google costs are minimal to me, so I don't need compensation. " +
-                    "I'm probably cheering each time a new user signs up. Email me with questions " +
-                    "or comments:  bosunaire@gmail.com",
+                    "Please feel free to email me with questions or comments:  bosunaire@gmail.com",
             },
 
         ],
