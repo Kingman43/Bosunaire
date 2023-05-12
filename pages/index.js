@@ -43,7 +43,7 @@ export default function Home() {
                 <h2 className="py-4">
                     Privacy is paramount. Your friends and neighbors will never know you've posted a listing
                     on Bosunaire.
-                    Buyers and travelers will enter search criteria. If your listing/post falls within
+                    Buyers and travelers will enter search criteria. If your listing falls within
                     their search filter, we will email you.
                     Then it's up to you whether you connect via email.
                 </h2>
