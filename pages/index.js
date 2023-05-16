@@ -3,7 +3,6 @@ import Link from "next/link";
 import BoHome from "@/components/bohome.js";
 import YoyoWithBo from "@/components/yoyowithbo";
 
-
 export default function Home() {
   return (
     <>
@@ -73,9 +72,6 @@ export default function Home() {
                 <YoyoWithBo/>
                 <BoHome/>
             </div>
-
-
-
         </main>
     </>
   )

@@ -24,8 +24,8 @@ export default function FaqPage() {
                 title: "What does Bosunaire actually mean?",
                 content: "Bosunaire derives from 'Bosun'. A bosun is a senior crew member of a boat or ship. " +
                     "The bosun supervises much of the crew including planning, scheduling and assigning tasks. " +
-                    "Bosunaire is a made-up word referring to anyone that 'YOYOs' with another Bosunaire member. " +
-                    "Users of Bosunaire.com may affectionately call each other 'Bo'.",
+                    "Bosunaire is a made-up word referring to anyone that 'YOYOs' with another Bosunaire member. ",
+
             },
             {
                 title: "What is 'Yoyo with Bo'?",
